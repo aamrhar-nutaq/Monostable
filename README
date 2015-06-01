@@ -1,0 +1,39 @@
+                               Monostable
+
+About
+-----
+
+Monostable is a Verilog implementation of a monostable multivibrator;
+when triggered, it will switch to a high position for a period of clock
+ticks, and then return to a low position.
+
+Usage
+-----
+
+The "monostable" module implements a monostable multivibrator. It takes
+in three inputs (clk, reset, trigger) and outputs a single signal
+(pulse). The clk input is the clock; the reset input resets the module;
+the trigger input triggers the module; the pulse output is the current
+state. The pulse width of the output signal can be set via the
+PULSE_WIDTH parameter, which represents the period in clock ticks that
+the signal should stay high.
+
+The "delayed_monostable" module implements a monostable multivibrator
+with a start-up delay. It has the same inputs and outputs as the
+"monostable" module. The delay can be configured via the DELAY_WIDTH
+parameter, which represents the time in clock ticks to wait until
+triggering the "monostable" module; the pulse width of the triggered
+"monostable" module can be set via the SIGNAL_WIDTH parameter, which
+represents the period in clock ticks that the signal should stay high.
+
+Licensing
+---------
+
+Monostable is free software released under the BSD 2-Clause License.
+
+See the file LICENSE for copying conditions.
+
+Contact
+-------
+
+William Breathitt Gray <vilhelm.gray@gmail.com>
